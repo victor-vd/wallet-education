@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Perfil</title>
+    <link rel="stylesheet" href="PaginaPerfil.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <img src="../Images/perfil.png" alt="Ícone do Usuário" class="user-icon">
+            
+            <!-- Menu Hambúrguer -->
+            <div class="menu-item" onclick="toggleMenu()">
+                <div class="hamburger">
+                    <img src="../Images/menu-icon.svg" alt="Menu Icon">
+                </div>
+                <span class="menu-text">Menu</span>
+            </div>
+            
+            <!-- Itens do Menu -->
+            <div class="menu-item">
+                <a href="../Menu principal/Inicio.html">
+                    <span class="menu-icon"><img src="../Images/casa.png" alt="Home"></span>
+                    <span class="menu-text">Início</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../Menu principal/Inicio.html">
+                    <span class="menu-icon"><img src="../Images/abra-o-livro.png" alt=""></span>
+                    <span class="menu-text">Aulas</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../PaginaEscolhaJogos.html">
+                    <span class="menu-icon"><img src="../Images/Controle.png" alt="Controle"></span>
+                    <span class="menu-text">Jogos</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="../PaginaAplicação.html">
+                <span class="menu-icon"><img src="../Images/Maleta.png" alt="Maleta"></span>
+                <span class="menu-text">Aplicação</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="additional-image">
+                <img src="../Images/download.jpg" alt="Imagem Adicional" class="top-image">
+            </div>
+            <div class="content-flex">
+                <div class="profile-container">
+                    <div class="profile">
+                        <img src="../Images/melissa.svg" alt="Foto de perfil" class="profile-pic">
+                        <h3>Melissa Peters</h3>
+                        <p>Estudante</p>
+                        <p>Bahia, Brasil</p>
+                        <div class="profile-stats">
+                            <div>
+                                <span>30</span>
+                                <p>Aulas concluídas</p>
+                            </div>
+                            <div>
+                                <span>5</span>
+                                <p>Jogos realizados</p>
+                            </div>
+                        </div>
+                        <button id="logout-button">Sair do perfil</button>
+
+                        <button>Editar perfil</button>
+                    </div>
+                </div>
+
+                <div class="side-sections">
+                    <div class="section">
+                        <h2>Jogos Favoritos :</h2>
+                        <div class="games">
+                            <div class="game-card">
+                                <img src="../Images/cooking.svg" alt="Cooking and economy">
+                                <p>Cooking and economy</p>
+                            </div>
+                            <div class="game-card">
+                                <img src="../Jogo/Jogo.svg" alt="Tabuleiro da riqueza">
+                                <p>Tabuleiro da riqueza</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Cursos Realizados :</h2>
+                        <div class="courses">
+                            <div class="course-card">
+                                <img src="../Images/TelaPib.png" alt="TelaPib">
+                                <p>Entenda o PIB de uma vez por todas</p>
+                            </div>
+                            <div class="course-card">
+                                <img src="../Images/GraficoFigma.jpeg" alt="Introdução à Economia">
+                                <p>Introdução à Economia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('expanded');
+        }
+
+        document.getElementById('logout-button').addEventListener('click', function() {
+        const confirmed = confirm("Tem certeza que deseja sair?");
+        if (confirmed) {
+            // Redireciona para a página de login ou qualquer outra página desejada
+            window.location.href = "../Pagina Login/PaginaLogin.html"; // Altere "login.html" para o link desejado
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="PaginaLogin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="icone-casa">
+            <a href="../Tela Inicial/telainicial.html">
+                <img src="../Images/Icone casa-Photoroom.png" alt="Ícone Home">
+            </a>
+        </div>
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" required>
+                
+                <label for="password">Senha</label>
+                <input type="password" id="password" required>
+                
+                <button type="submit">Entrar</button>
+                
+                <div class="links">
+                    <a href="Pagina Esqueceu/PaginaEsqueceu.html">Esqueceu a senha?</a>
+                    <a href="../Pagina Registro/Paginaregistro.html">Não possui uma conta? Criar conta</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="logo">
+            <img src="../Images/wallet_white-Photoroom.png" alt="Logo">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Wallet Education </p>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            const email = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Armazena o token no armazenamento local (localStorage)
+                    localStorage.setItem('token', data.token);
+
+                    // Redireciona para a tela inicial
+                    window.location.href = '../Menu principal/inicio.html';
+                } else {
+                    alert(data.message || 'Erro ao fazer login. Verifique suas credenciais.');
+                }
+            } catch (error) {
+                console.error('Erro ao fazer login:', error);
+                alert('Ocorreu um erro. Tente novamente mais tarde.');
+            }
+        });
+    </script>
+</body>
+</html>

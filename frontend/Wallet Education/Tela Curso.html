@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyEducation - Aulas</title>
+    <link rel="stylesheet" href="Tela Curso.css">
+</head>
+<body>
+
+
+    <div class="container"> <!-- Ajuste: Container ao redor de sidebar e content -->
+        
+        <div class="sidebar" id="sidebar">
+            <a href="Pagina Perfil/PaginaPerfil.html">
+            <img src="../Images/perfil.png" alt="Ícone do Usuário" class="user-icon">
+        </a>
+            <!-- Menu Hambúrguer -->
+            <div class="menu-item" onclick="toggleMenu()">
+                <div class="hamburger">
+                    <img src="../Images/menu-icon.svg" alt="Menu Icon">
+                </div>
+                <span class="menu-text">Menu</span>
+            </div>
+            
+            <!-- Itens do Menu -->
+            <div class="menu-item">
+                <a href="Menu principal/Inicio.html">
+                    <span class="menu-icon"><img src="../Images/casa.png" alt="Home"></span>
+                    <span class="menu-text">Início</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="Menu principal/Inicio.html">
+                    <span class="menu-icon"><img src="/Images/abra-o-livro.png" alt=""></span>
+                    <span class="menu-text">Aulas</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="PaginaEscolhaJogos.html">
+                    <span class="menu-icon"><img src="../Images/Controle.png" alt="Controle"></span>
+                    <span class="menu-text">Jogos</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="PaginaAplicação.html">
+                <span class="menu-icon"><img src="../Images/Maleta.png" alt="Maleta"></span>
+                <span class="menu-text">Aplicação</span>
+            </a>
+            </div>
+        </div>
+        
+    <!-- Conteúdo Principal -->
+    <div class="content">
+        <header>
+            <h1 id="course-title">Entenda o PIB de uma vez por todas</h1>
+            <div class="user-icon">👤</div>
+        </header>
+
+        <!-- Aula Principal -->
+        <section class="course-main" id="course-content">
+            <iframe id="course-video" width="100%" height="400" src="https://www.youtube.com/embed/MgXhrC-TZss" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            <div class="course-description" id="course-description">
+                Produto Interno Bruto, mais conhecido como PIB. Saiba tudo sobre o PIB nesta aula introdutória.
+            </div>
+        </section>
+
+        <!-- Barra de Progresso -->
+        <section class="progress-section">
+            <h2>Progresso da Aula</h2>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <button onclick="nextLesson()">Próxima Aula</button>
+        </section>
+    </div>
+
+    <!-- Playlist de Aulas -->
+    <aside class="playlist">
+        <h2>Playlist de Aulas</h2>
+        <ul class="playlist-list" id="playlist-list">
+            <li class="playlist-item" onclick="selectLesson(0)">Aula 1: PIB - PRODUTO INTERNO BRUTO - PIB</li>
+            <li class="playlist-item" onclick="selectLesson(1)">Aula 2: Sistemas de metas de inflação</li>
+            <li class="playlist-item" onclick="selectLesson(2)">Aula 3: COPOM E TAXA SELIC</li>
+            <li class="playlist-item" onclick="selectLesson(3)">Aula 4: OPEN MARKET</li>
+            <li class="playlist-item" onclick="selectLesson(4)">Aula 5: DEPÓSITO COMPULSÓRIO</li>
+        </ul>
+    </aside>
+</div>
+
+<script>
+    // Dados das aulas com os links de vídeo
+    const lessons = [
+        { title: "Noções de Economia", description: "PIB - PRODUTO INTERNO BRUTO (CPA10, CPA20, CEA, AAI, CFP®).", video: "https://www.youtube.com/embed/MgXhrC-TZss" },
+        { title: "Noções de Economia", description: " Sistemas de metas de inflação: IPCA (CPA10, CPA20, CEA, AAI e CFP®)", video: "https://www.youtube.com/embed/idoaoY4il6A?si=_7HGKDsPte_Dw4co" },
+        { title: "Noções de Economia", description: "POLÍTICA MONETÁRIA: COPOM E TAXA SELIC", video: "https://www.youtube.com/embed/ToJs1G4rnu0?si=WWVXurGOKlNSa68I" },
+        { title: "Noções de Economia", description: " POLÍTICA MONETÁRIA: OPEN MARKET", video: "https://www.youtube.com/embed/pxnjuH0P_go?si=ZnfWJwvoKyOC5cI8" },
+        { title: "NOÇÕES DE ECONOMIA", description: " POLÍTICA MONETÁRIA: DEPÓSITO COMPULSÓRIO", video: "https://www.youtube.com/embed/MWweatcEafc?si=LihkQ0_6R2NTFwPX" }
+    ];
+
+    let currentLessonIndex = 0;
+
+    function toggleMenu() {
+        document.getElementById('sidebar').classList.toggle('expanded');
+    }
+
+    function nextLesson() {
+        currentLessonIndex = (currentLessonIndex + 1) % lessons.length;
+        updateLessonContent();
+
+        let progressPercentage = ((currentLessonIndex + 1) / lessons.length) * 100;
+        updateProgressOnServer(1, currentLessonIndex + 1, progressPercentage); 
+    }
+
+    function selectLesson(index) {
+        currentLessonIndex = index;
+        updateLessonContent();
+    }
+
+    function updateLessonContent() {
+        document.getElementById('course-title').innerText = lessons[currentLessonIndex].title;
+        document.getElementById('course-description').innerText = lessons[currentLessonIndex].description;
+        document.getElementById('course-video').src = lessons[currentLessonIndex].video;
+
+        const progressBar = document.getElementById('progress');
+        let progressPercentage = ((currentLessonIndex + 1) / lessons.length) * 100;
+        progressBar.style.width = progressPercentage + '%';
+
+        document.querySelectorAll('.playlist-item').forEach((item, index) => {
+            item.classList.toggle('active', index === currentLessonIndex);
+        });
+    }
+</script>
+
+</body>
+</html>

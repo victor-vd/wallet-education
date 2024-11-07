@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #005bff, #1a1a1a);
+}
+
+body {
+    width: 100%;
+    min-height: 150vh;
+}
+
+.container {
+    width: 400px;
+    position: relative;
+}
+
+.icone-casa {
+    position: absolute;
+    top: 12px;
+    left: -555px;
+}
+
+.icone-casa img {
+    width: 70px;
+    height: 50px;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 250px;
+    height: auto;
+}
+
+.form-box {
+    background-color: #1f1f1f;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+.form-box h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.form-box input, .form-box select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2e2e2e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.form-box input::placeholder, .form-box select {
+    color: #bfbfbf;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #005bff, #1a1a1a);
+    overflow: hidden;
+}
+
+/* Estilo para o ícone de casa */
+.icon-home {
+    position: absolute;
+    top: 0px;
+    left: -10px;
+}
+
+.icon-home img {
+    width: 70px;
+    height: 50px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Container principal */
+.container {
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #005bff;
+    border-radius: 10px;
+    background: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Título */
+h1 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo da área de pagamento */
+.payment-box {
+    background: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.qr-code img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+    animation: scaleAnimation 3s ease-in-out infinite;
+}
+
+@keyframes scaleAnimation {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.payment-code {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #bfbfbf;
+}
+
+.code {
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #a6a6a6;
+}
+
+.copy-icon img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.copy-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Botão de confirmação com animação */
+.confirm-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.confirm-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #0056b3, #00408d);
+}
+
+.confirm-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+.confirm-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #cccccc;
+}
+
+footer p {
+    margin: 5px 0;
+}

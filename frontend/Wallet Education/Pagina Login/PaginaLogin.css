@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #005bff, #1a1a1a);
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Permite que os elementos sejam distribuídos */
+    padding: 20px;
+}
+
+.icone-casa {
+    position: absolute;
+    top: 0px;
+    left: -310px;
+}
+
+.icone-casa img {
+    width: 70px;
+    height: 50px;
+}
+
+.login-container {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    color: white;
+    margin-right: 120px; /* Faz o container de login usar o espaço disponível */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin: 10px 0 5px;
+    color: #bfbfbf;
+}
+
+.login-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.login-container button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container .links {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-container .links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+.logo {
+    margin-left: auto; /* A logo é empurrada para a direita */
+    color: white;
+}
+
+.logo img {
+    width: 500px; /* Aumenta o tamanho da logo */
+    margin-bottom: 10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #cccccc;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 5px 0;
+}

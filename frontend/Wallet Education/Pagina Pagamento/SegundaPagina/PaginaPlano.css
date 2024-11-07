@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #005bff, #1a1a1a);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-out;
+}
+
+.icon-home {
+    position: absolute;
+    top: -150px;
+    left: -480px;
+}
+
+.icon-home .home {
+    width: 70px;
+    height: 50px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 50px; /* Reduzi para ficar mais próximo */
+}
+
+.plan {
+    background-color: #1f1f1f;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    color: white; /* Define a cor do texto */
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+  
+    
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plan h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan ul li {
+    margin-bottom: 15px;
+    font-size: larger;
+}
+
+.plan p {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.plan a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.plan a:hover {
+    color: #4fa3ff;
+    text-decoration: none;
+}
+
+.trial-message {
+    margin-top: 30px;
+    font-size: 18px;
+    color: white;
+   
+  
+}
+
+.trial-message a{
+
+    text-decoration: none;
+    color: white;
+}
+.trial-message strong {
+    color: #ffdd00;
+}
+
+/* Animação de FadeIn */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.blue-decorator {
+    position: absolute;
+    background-color: #007bff;
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.blue-decorator.left {
+    top: 20%;
+    left: -100px;
+    transform: rotate(30deg);
+}
+
+.blue-decorator.right {
+    bottom: 15%;
+    right: -100px;
+    transform: rotate(-30deg);
+}
