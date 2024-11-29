@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Despesas</title>
-    <link rel="stylesheet" href="PaginaAplicação.css"> <!-- Certifique-se de que o caminho está correto -->
+    <link rel="stylesheet" href="../Styles/PaginaAplicação.css"> <!-- Certifique-se de que o caminho está correto -->
 </head>
+
 <body>
     <div class="container">
         <!-- Menu lateral -->
         <div class="sidebar" id="sidebar">
-            <a href="Pagina Perfil/PaginaPerfil.html">
-            <img src="../Images/perfil.png" alt="Ícone do Usuário" class="user-icon">
-            <!-- Menu Hambúrguer -->
-        </a>
+            <a href="./PaginaPerfil.html">
+                <img src="../Assets/Images/perfil.png" alt="Ícone do Usuário" class="user-icon">
+                <!-- Menu Hambúrguer -->
+            </a>
             <div class="menu-item" onclick="toggleMenu()">
                 <div class="hamburger">
-                    <img src="../Images/menu-icon.svg" alt="Menu Icon">
+                    <img src="../Assets/Images/menu-icon.svg" alt="Menu Icon">
                 </div>
                 <span class="menu-text">Menu</span>
             </div>
-            
+
             <!-- Itens do Menu -->
             <div class="menu-item">
-                <a href="Menu principal/Inicio.html">
-                    <span class="menu-icon"><img src="../Images/casa.png" alt="Home"></span>
+                <a href="./index.html">
+                    <span class="menu-icon"><img src="../Assets/Images/casa.png" alt="Home"></span>
                     <span class="menu-text">Início</span>
                 </a>
             </div>
             <div class="menu-item">
-                <a href="Menu principal/Inicio.html">
-                    <span class="menu-icon"><img src="/Images/abra-o-livro.png" alt=""></span>
+                <a href="./index.html">
+                    <span class="menu-icon"><img src="../Assets/Images/abra-o-livro.png" alt=""></span>
                     <span class="menu-text">Aulas</span>
                 </a>
             </div>
             <div class="menu-item">
-                <a href="../PaginaEscolhaJogos.html">
-                    <span class="menu-icon"><img src="../Images/Controle.png" alt="Controle"></span>
+                <a href="./PaginaEscolhaJogos.html">
+                    <span class="menu-icon"><img src="../Assets/Images/Controle.png" alt="Controle"></span>
                     <span class="menu-text">Jogos</span>
                 </a>
             </div>
             <div class="menu-item">
-                <span class="menu-icon"><img src="../Images/Maleta.png" alt="Maleta"></span>
+                <span class="menu-icon"><img src="../Assets/Images/Maleta.png" alt="Maleta"></span>
                 <span class="menu-text">Aplicação</span>
             </div>
         </div>
@@ -51,7 +53,7 @@
             <!-- Cabeçalho -->
             <header>
                 <h1>DESPESAS</h1>
-                
+
             </header>
 
             <!-- Seção de despesas -->
@@ -76,7 +78,7 @@
                     <div class="item"><span>Curso CNA</span><span>R$ 249,90</span></div>
                     <div class="item"><span>Roblox</span><span>R$ 104,60</span></div>
                 </div>
-                
+
                 <div class="box gastos">
                     <h2>Gastos Diários</h2>
                     <div class="item"><span>Livro (Economia)</span><span>R$ 170,00</span></div>
@@ -104,4 +106,5 @@
         }
     </script>
 </body>
+
 </html>

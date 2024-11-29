@@ -1,20 +1,22 @@
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Registro parte 2</title>
-    <link rel="stylesheet" href="Paginaregistro2.css">
+    <link rel="stylesheet" href="../Styles/Paginaregistro2.css">
 </head>
+
 <body>
     <div class="container">
         <div class="icone-casa">
-            <a href="telainicial.html">
-            <img src="../../Images/Icone casa-Photoroom.png" alt="Home Icon">
+            <a href="./telainicial.html">
+                <img src="../Assets/Images/Icone casa-Photoroom.png" alt="Home Icon">
             </a>
         </div>
         <div class="form-box">
             <div class="logo-container">
-                <img src="../../Images/wallet_white-Photoroom.png" alt="Logo da Empresa" class="logo">
+                <img src="../Assets/Images/wallet_white-Photoroom.png" alt="Logo da Empresa" class="logo">
             </div>
             <h2>Preencha as informações para se registrar!</h2>
             <form action="#">
@@ -27,7 +29,7 @@
                     <option value="escola2">Escola Municipal DEF</option>
                     <option value="escola3">Colégio GHI</option>
                     <option value="escola4">Instituto JKL</option>
-                    <option value="nao_faco_parte">Não faço parte das escolas</option> 
+                    <option value="nao_faco_parte">Não faço parte das escolas</option>
                 </select>
 
                 <button type="submit">Próximo</button>
@@ -36,7 +38,7 @@
     </div>
 
     <script>
-       
+
         function mascaraCPF(value) {
             return value
                 .replace(/\D/g, '')
@@ -62,26 +64,27 @@
         });
 
         document.querySelector("form").addEventListener("submit", function (e) {
-         e.preventDefault();
+            e.preventDefault();
 
-        const dataNascimento = document.getElementById("dataNascimento").value;
-        const escolaSelecionada = document.getElementById("escola").value;
+            const dataNascimento = document.getElementById("dataNascimento").value;
+            const escolaSelecionada = document.getElementById("escola").value;
 
-        if (!dataNascimento) {
-        alert("Por favor, preencha sua data de nascimento.");
-        return;
-        }
+            if (!dataNascimento) {
+                alert("Por favor, preencha sua data de nascimento.");
+                return;
+            }
 
-        if (escolaSelecionada === "nao_faco_parte") {
-    window.location.href = "PaginaPlano.html";
-} else {
-    window.location.href = "../../Pagina Registro/PaginaEscola.html";
-}
+            if (escolaSelecionada === "nao_faco_parte") {
+                window.location.href = "PaginaPlano.html";
+            } else {
+                window.location.href = "./PaginaEscola.html";
+            }
         });
 
-        
+
 
     </script>
-    
+
 </body>
+
 </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGO 02: Tabuleiro da Riqueza</title>
+    <link rel="stylesheet" href="../Styles/IniciandoJogo.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Menu Lateral -->
+        <div class="sidebar" id="sidebar">
+            <img src="../Assets/Images/perfil.png" alt="Ícone do Usuário" class="user-icon">
+
+            <!-- Menu Hambúrguer -->
+            <div class="menu-item" onclick="toggleMenu()">
+                <div class="hamburger">
+                    <img src="../Assets/Images/menu-icon.svg" alt="Menu Icon">
+                </div>
+                <span class="menu-text">Menu</span>
+            </div>
+
+            <!-- Itens do Menu -->
+            <div class="menu-item">
+                <a href="./index.html">
+                    <span class="menu-icon"><img src="../Assets/Images/casa.png" alt="Home"></span>
+                    <span class="menu-text">Início</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="./index.html"></a>
+                <span class="menu-icon"><img src="../Assets/Images/abra-o-livro.png" alt="Aulas"></span>
+                <span class="menu-text">Aulas</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="./PaginaEscolhaJogos.html">
+                    <span class="menu-icon"><img src="../Assets/Images/Controle.png" alt="Jogos"></span>
+                    <span class="menu-text">Jogos</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="./PaginaAplicação.html">
+                    <span class="menu-icon"><img src="../Assets/Images/Maleta.png" alt="Aplicação"></span>
+                    <span class="menu-text">Aplicação</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="content">
+            <header>
+                <h1>JOGO 02: Tabuleiro da Riqueza</h1>
+            </header>
+
+            <!-- Imagem do jogo que funciona como botão -->
+            <div class="game-area">
+                <img id="gameImage" src="../Assets/Images/Iniciandojogo.svg" alt="Tela de Início" class="game-image"
+                    onclick="changeImage()">
+                <p class="description">O Tabuleiro da Riqueza é um jogo cujo objetivo é chegar ao final com o máximo de
+                    dinheiro possível.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("expanded");
+        }
+
+        function changeImage() {
+            window.location.href = 'Telajogo.html'
+        }
+    </script>
+</body>
+
+</html>

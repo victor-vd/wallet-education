@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início - MyEducation</title>
-    <link rel="stylesheet" href="Inicio.css">
+    <link rel="stylesheet" href="../Styles/Inicio.css">
 </head>
+
 <body>
     <div class="container"> <!-- Ajuste: Container ao redor de sidebar e content -->
-        
+
         <div class="sidebar" id="sidebar">
-            <a href="../Pagina Perfil/PaginaPerfil.html">
-            <img src="../Images/perfil.png" alt="Ícone do Usuário" class="user-icon">
-        </a>
-            
+            <a href="./PaginaPerfil.html">
+                <img src="../Assets/Images/perfil.png" alt="Ícone do Usuário" class="user-icon">
+            </a>
+
             <!-- Menu Hambúrguer -->
             <div class="menu-item" onclick="toggleMenu()">
                 <div class="hamburger">
-                    <img src="../Images/menu-icon.svg" alt="Menu Icon">
+                    <img src="../Assets/Images/menu-icon.svg" alt="Menu Icon">
                 </div>
                 <span class="menu-text">Menu</span>
             </div>
-            
+
             <!-- Itens do Menu -->
             <div class="menu-item">
-                <a href="Inicio.html">
-                    <span class="menu-icon"><img src="../Images/casa.png" alt="Home"></span>
+                <a href="./index.html">
+                    <span class="menu-icon"><img src="../Assets/Images/casa.png" alt="Home"></span>
                     <span class="menu-text">Início</span>
                 </a>
             </div>
             <div class="menu-item">
-                <a href="../Tela Curso.html ">
+                <a href="./Tela Curso.html ">
                     <span class="menu-icon"><img src="/Images/abra-o-livro.png" alt=""></span>
                     <span class="menu-text">Aulas</span>
                 </a>
             </div>
             <div class="menu-item">
-                <a href="../PaginaEscolhaJogos.html">
-                    <span class="menu-icon"><img src="../Images/Controle.png" alt="Controle"></span>
+                <a href="./PaginaEscolhaJogos.html">
+                    <span class="menu-icon"><img src="../Assets/Images/Controle.png" alt="Controle"></span>
                     <span class="menu-text">Jogos</span>
                 </a>
             </div>
             <div class="menu-item">
-                <a href="../PaginaAplicação.html">
-                <span class="menu-icon"><img src="../Images/Maleta.png" alt="Maleta"></span>
-                <span class="menu-text">Aplicação</span>
-            </a>
+                <a href="./PaginaAplicação.html">
+                    <span class="menu-icon"><img src="../Assets/Images/Maleta.png" alt="Maleta"></span>
+                    <span class="menu-text">Aplicação</span>
+                </a>
             </div>
         </div>
-        
+
         <!-- Conteúdo principal -->
         <div class="content">
             <header>
@@ -60,17 +62,17 @@
                 <h2>Meus Cursos</h2>
                 <div class="course-grid">
                     <div class="course-card">
-                        <a href="../Tela Curso.html">
-                            <img src="../images/TelaPib.png" alt="Curso 1">
+                        <a href="./Tela Curso.html">
+                            <img src="Images/TelaPib.png" alt="Curso 1">
                             <div class="course-title">Entenda o PIB de uma vez por todas</div>
                         </a>
                     </div>
                     <div class="course-card">
-                        <img src="../images/GraficoFigma.jpeg" alt="Curso 2">
+                        <img src="../Assets/Images/GraficoFigma.jpeg" alt="Curso 2">
                         <div class="course-title">Introdução à Economia</div>
                     </div>
                     <div class="course-card">
-                        <img src="../images/Planejamento.png" alt="Curso 3">
+                        <img src="../Assets/Images/Planejamento.png" alt="Curso 3">
                         <div class="course-title">Planejamento Financeiro</div>
                     </div>
                 </div>
@@ -80,15 +82,15 @@
                 <h2>Lista de Cursos</h2>
                 <div class="course-grid">
                     <div class="course-card">
-                        <img src="../images/Historia da economia.jpg" alt="Curso 4">
+                        <img src="../Assets/Images/Historia da economia.jpg" alt="Curso 4">
                         <div class="course-title">História da Economia</div>
                     </div>
                     <div class="course-card">
-                        <img src="../images/EconomiaBrasileira.jpg" alt="Curso 5">
+                        <img src="../Assets/Images/EconomiaBrasileira.jpg" alt="Curso 5">
                         <div class="course-title">Economia Brasileira</div>
                     </div>
                     <div class="course-card">
-                        <img src="../images/MicroEconomia.jpg" alt="Curso 6">
+                        <img src="../Assets/Images/MicroEconomia.jpg" alt="Curso 6">
                         <div class="course-title">Microeconomia</div>
                     </div>
                 </div>
@@ -109,4 +111,5 @@
         }
     </script>
 </body>
+
 </html>

@@ -2,7 +2,8 @@
   "name": "wallet-education",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "github": "https://github.com/keziazcs/wallet-education",
+  "main": "Templates/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +13,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.1",
-    "pg": "^8.13.1"
+    "pg": "^8.13.1",
+    "wallet-education": "file:"
   }
 }

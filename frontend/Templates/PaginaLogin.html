@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="PaginaLogin.css">
+    <link rel="stylesheet" href="../Styles/PaginaLogin.css">
 </head>
+
 <body>
     <div class="container">
         <div class="icone-casa">
-            <a href="../Tela Inicial/telainicial.html">
-                <img src="../Images/Icone casa-Photoroom.png" alt="Ícone Home">
+            <a href="./telainicial.html">
+                <img src="../Assets/Images/Icone casa-Photoroom.png" alt="Ícone Home">
             </a>
         </div>
 
@@ -19,21 +21,21 @@
             <form id="loginForm">
                 <label for="username">Usuário</label>
                 <input type="text" id="username" required>
-                
+
                 <label for="password">Senha</label>
                 <input type="password" id="password" required>
-                
+
                 <button type="submit">Entrar</button>
-                
+
                 <div class="links">
-                    <a href="Pagina Esqueceu/PaginaEsqueceu.html">Esqueceu a senha?</a>
-                    <a href="../Pagina Registro/Paginaregistro.html">Não possui uma conta? Criar conta</a>
+                    <a href="./PaginaEsqueceu.html">Esqueceu a senha?</a>
+                    <a href="./Paginaregistro.html">Não possui uma conta? Criar conta</a>
                 </div>
             </form>
         </div>
 
         <div class="logo">
-            <img src="../Images/wallet_white-Photoroom.png" alt="Logo">
+            <img src="../Assets/Images/wallet_white-Photoroom.png" alt="Logo">
         </div>
     </div>
 
@@ -64,7 +66,7 @@
                     localStorage.setItem('token', data.token);
 
                     // Redireciona para a tela inicial
-                    window.location.href = '../Menu principal/inicio.html';
+                    window.location.href = 'index.html';
                 } else {
                     alert(data.message || 'Erro ao fazer login. Verifique suas credenciais.');
                 }
@@ -75,4 +77,5 @@
         });
     </script>
 </body>
+
 </html>
