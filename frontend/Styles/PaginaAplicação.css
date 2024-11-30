@@ -6,7 +6,8 @@
 }
 
 /* Configuração básica */
-body, html {
+body,
+html {
     font-family: Arial, sans-serif;
     background: linear-gradient(180deg, #005bff, #1a1a1a);
     color: #ffffff;
@@ -18,78 +19,6 @@ body, html {
     display: flex;
     width: 100%;
     height: 100%;
-}
-
-/* Menu lateral */
-.sidebar {
-    width: 80px;
-    background: #1a1a1a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    transition: width 0.3s ease;
-    flex-shrink: 0;
-}
-
-.sidebar.expanded {
-    width: 220px;
-}
-
-.user-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #333333;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-
-.menu-item {
-    text-align: center;
-    padding: 15px 0;
-    width: 100%;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.menu-item:hover {
-    background: #005bff;
-    transform: translateX(5px);
-}
-
-.menu-item a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.menu-icon {
-    font-size: 20px;
-}
-
-.menu-icon img {
-    width: 35px;
-    height: 35px;
-}
-
-.menu-text {
-    display: none;
-    font-size: 16px;
-}
-
-.sidebar.expanded .menu-text {
-    display: inline;
-}
-
-/* Estilo do menu hambúrguer */
-.hamburger img {
-    width: 35px;
 }
 
 /* Conteúdo principal */
@@ -163,19 +92,22 @@ header .criar-cofre:hover {
     color: #cccccc;
 }
 
-.valor-atual, .pendencias {
+.valor-atual,
+.pendencias {
     font-size: 36px;
     font-weight: bold;
 }
 
 /* Box de Pendências e Gastos */
-.pendencias, .gastos {
+.pendencias,
+.gastos {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.pendencias .item, .gastos .item {
+.pendencias .item,
+.gastos .item {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
@@ -183,7 +115,8 @@ header .criar-cofre:hover {
     border-bottom: 1px solid #444;
 }
 
-.pendencias .item:last-child, .gastos .item:last-child {
+.pendencias .item:last-child,
+.gastos .item:last-child {
     border-bottom: none;
 }
 
