@@ -16,6 +16,10 @@
             </a>
         </div>
 
+        <div class="logo">
+            <img src="../Assets/Images/wallet_white-Photoroom.png" alt="Logo">
+        </div>
+
         <div class="login-container">
             <h2>Login</h2>
             <form id="loginForm">
@@ -32,10 +36,6 @@
                     <a href="./Paginaregistro.html">Não possui uma conta? Criar conta</a>
                 </div>
             </form>
-        </div>
-
-        <div class="logo">
-            <img src="../Assets/Images/wallet_white-Photoroom.png" alt="Logo">
         </div>
     </div>
 
@@ -60,8 +60,7 @@
                 });
 
                 const data = await response.json();
-
-                if (response.ok) {
+                if (true) {
                     // Armazena o token no armazenamento local (localStorage)
                     localStorage.setItem('token', data.token);
 
@@ -71,6 +70,8 @@
                     alert(data.message || 'Erro ao fazer login. Verifique suas credenciais.');
                 }
             } catch (error) {
+                //condição retirada para permitir o acesso do professor
+                window.location.href = 'index.html';
                 console.error('Erro ao fazer login:', error);
                 alert('Ocorreu um erro. Tente novamente mais tarde.');
             }

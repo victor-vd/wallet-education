@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
@@ -15,19 +16,21 @@ body, html {
 
 body {
     width: 100%;
-    min-height: 150vh;
 }
 
 .container {
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     position: relative;
 }
 
 /* Estilo para o ícone de casa */
 .Icone-casa {
     position: absolute;
-    top: 50px; /* Ajuste conforme necessário */
-    left: -550px; /* Ajuste conforme necessário */
+    top: 50px;
+    /* Ajuste conforme necessário */
+    left: -550px;
+    /* Ajuste conforme necessário */
 }
 
 .Icone-casa img {
@@ -91,3 +94,63 @@ body {
     background-color: #0056b3;
 }
 
+.form-box input,
+.form-box select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2e2e2e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.form-box input::placeholder,
+.form-box select {
+    color: #bfbfbf;
+}
+
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .Icone-casa {
+        left: 20px;
+        /* Ajuste conforme necessário */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-box {
+        padding: 20px;
+    }
+
+    .form-box h2 {
+        font-size: 18px;
+    }
+
+    .form-box input {
+        font-size: 12px;
+    }
+
+    .form-box button {
+        font-size: 14px;
+    }
+}

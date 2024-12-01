@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
@@ -24,6 +25,10 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .icone-casa {
@@ -39,12 +44,12 @@ body {
 
 .logo-container {
     text-align: center;
-    margin-bottom: -100px;
+    margin-bottom: 0px;
 }
 
 .logo {
     max-width: 250px;
-    height: auto    ;
+    height: auto;
 }
 
 .form-box {
@@ -119,4 +124,19 @@ body {
     bottom: 15%;
     right: -630px;
     transform: rotate(-30deg);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .form-box {
+        padding: 32px;
+        border-radius: 8px;
+        margin-top: 64px;
+        max-width: fit-content;
+    }
 }

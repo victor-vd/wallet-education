@@ -46,8 +46,24 @@ header h1 {
     font-size: 24px;
 }
 
+.icon-home {
+    position: absolute;
+    top: -150px;
+    left: -480px;
+}
+
+.icon-home .home {
+    width: 70px;
+    height: 50px;
+}
+
 /* Seção de cursos */
 
+
+.tela-curso {
+    display: flex;
+    flex-direction: row;
+}
 
 .courses-section h2 {
     font-size: 18px;
@@ -130,25 +146,10 @@ body {
     height: 100vh;
 }
 
-.container {
-    display: flex;
-    width: 100%;
-}
-
 .content {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background: #2980b9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .course-main {
@@ -429,4 +430,191 @@ button {
 .course-card p {
     margin-top: 5px;
     font-size: 14px;
+}
+
+
+
+
+
+
+
+/* Reset básico */
+.icon-home {
+    position: absolute;
+    top: -150px;
+    left: -480px;
+}
+
+.icon-home .home {
+    width: 70px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+.pagina-plano {
+    text-align: center;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s forwards ease-out;
+}
+
+
+.container-plano {
+
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #005bff, #1a1a1a);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina-plano h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.plans-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 50px;
+}
+
+.plan {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #1f1f1f;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plan h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan ul li {
+    margin-bottom: 15px;
+    font-size: larger;
+}
+
+.plan p {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.plan a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.plan a:hover {
+    color: #4fa3ff;
+    text-decoration: none;
+}
+
+.trial-message {
+    margin-top: 30px;
+    font-size: 18px;
+    color: white;
+
+
+}
+
+.trial-message a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.trial-message strong {
+    color: #ffdd00;
+}
+
+/* Animação de FadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blue-decorator {
+    position: absolute;
+    background-color: #007bff;
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.blue-decorator.left {
+    top: 20%;
+    left: -100px;
+    transform: rotate(30deg);
+}
+
+.blue-decorator.right {
+    bottom: 15%;
+    right: -100px;
+    transform: rotate(-30deg);
+}
+
+
+@media (max-width: 468px) {
+    .tela-curso {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .playlist {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .content-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-container {
+        max-width: 320px;
+    }
 }

@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
@@ -20,8 +21,11 @@ body, html {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Permite que os elementos sejam distribuídos */
+    align-content: center;
+    justify-content: space-between;
     padding: 20px;
+    flex-wrap: wrap;
+    /* Permite que os elementos se ajustem em várias linhas */
 }
 
 .icone-casa {
@@ -40,9 +44,11 @@ body, html {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     color: white;
-    margin-right: 120px; /* Faz o container de login usar o espaço disponível */
+    margin: 0px auto;
+    /* Centraliza o container de login */
 }
 
 .login-container h2 {
@@ -99,12 +105,15 @@ body, html {
 }
 
 .logo {
-    margin-left: auto; /* A logo é empurrada para a direita */
+    margin-left: auto;
     color: white;
+    text-align: center;
+    width: 100%;
 }
 
 .logo img {
-    width: 500px; /* Aumenta o tamanho da logo */
+    width: 100%;
+    max-width: 150px;
     margin-bottom: 10px;
 }
 
@@ -119,4 +128,31 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-container {
+        margin: 20px;
+    }
+
+    .logo img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo img {
+        max-width: 200px;
+    }
 }
